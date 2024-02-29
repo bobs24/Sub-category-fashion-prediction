@@ -1,0 +1,414 @@
+[2024-02-29T07:43:28.114+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-02-29T07:43:28.118+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-02-29T07:43:28.118+0000] {manager.py:486} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-02-29T07:43:28.119+0000] {manager.py:724} INFO - Searching for files in /opt/airflow/dags
+[2024-02-29T07:43:28.133+0000] {manager.py:727} INFO - There are 2 files in /opt/airflow/dags
+[2024-02-29T07:43:28.340+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py      56  0.11s             0           0
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py     57  0.07s             0           0
+================================================================================
+[2024-02-29T07:43:58.497+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py      76  0.02s             0           0  0.24s           2024-02-29T07:43:28
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py     77  0.01s             0           0  0.20s           2024-02-29T07:43:28
+================================================================================
+[2024-02-29T07:44:28.711+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     105  0.02s             0           0  0.08s           2024-02-29T07:43:58
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    106  0.01s             0           0  0.05s           2024-02-29T07:43:58
+================================================================================
+[2024-02-29T07:44:58.871+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     125  0.02s             0           0  0.08s           2024-02-29T07:44:28
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    126  0.01s             0           0  0.07s           2024-02-29T07:44:28
+================================================================================
+[2024-02-29T07:45:29.073+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     154  0.03s             0           0  0.06s           2024-02-29T07:44:58
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    155  0.02s             0           0  0.06s           2024-02-29T07:44:58
+================================================================================
+[2024-02-29T07:45:59.233+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     183  0.02s             0           0  0.08s           2024-02-29T07:45:29
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    184  0.01s             0           0  0.07s           2024-02-29T07:45:29
+================================================================================
+[2024-02-29T07:46:29.463+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     203  0.01s             0           0  0.08s           2024-02-29T07:45:59
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    204  0.01s             0           0  0.09s           2024-02-29T07:45:59
+================================================================================
+[2024-02-29T07:46:59.626+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     232  0.02s             0           0  0.06s           2024-02-29T07:46:29
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    233  0.01s             0           0  0.05s           2024-02-29T07:46:29
+================================================================================
+[2024-02-29T07:47:29.780+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     252  0.02s             0           0  0.05s           2024-02-29T07:46:59
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    253  0.01s             0           0  0.05s           2024-02-29T07:46:59
+================================================================================
+[2024-02-29T07:47:59.943+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     281  0.01s             0           0  0.05s           2024-02-29T07:47:29
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    282  0.01s             0           0  0.05s           2024-02-29T07:47:29
+================================================================================
+[2024-02-29T07:48:29.082+0000] {manager.py:724} INFO - Searching for files in /opt/airflow/dags
+[2024-02-29T07:48:29.094+0000] {manager.py:727} INFO - There are 2 files in /opt/airflow/dags
+[2024-02-29T07:48:30.128+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     310  0.01s             0           0  0.06s           2024-02-29T07:47:59
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    311  0.01s             0           0  0.04s           2024-02-29T07:47:59
+================================================================================
+[2024-02-29T07:49:00.325+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     331  0.01s             0           0  0.06s           2024-02-29T07:48:30
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    332  0.01s             0           0  0.06s           2024-02-29T07:48:30
+================================================================================
+[2024-02-29T07:49:30.513+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     360  0.02s             0           0  0.06s           2024-02-29T07:49:00
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    361  0.01s             0           0  0.05s           2024-02-29T07:49:00
+================================================================================
+[2024-02-29T07:50:00.684+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     379  0.01s             0           0  0.08s           2024-02-29T07:49:30
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    380  0.01s             0           0  0.07s           2024-02-29T07:49:30
+================================================================================
+[2024-02-29T07:50:30.846+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     408  0.01s             0           0  0.07s           2024-02-29T07:50:00
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    409  0.01s             0           0  0.06s           2024-02-29T07:50:00
+================================================================================
+[2024-02-29T07:51:01.020+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     437  0.02s             0           0  0.06s           2024-02-29T07:50:30
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    438  0.01s             0           0  0.05s           2024-02-29T07:50:30
+================================================================================
+[2024-02-29T07:51:31.244+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     457  0.03s             0           0  0.08s           2024-02-29T07:51:01
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    458  0.01s             0           0  0.06s           2024-02-29T07:51:01
+================================================================================
+[2024-02-29T07:52:01.411+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     486  0.01s             0           0  0.07s           2024-02-29T07:51:31
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    487  0.01s             0           0  0.05s           2024-02-29T07:51:31
+================================================================================
+[2024-02-29T07:52:31.581+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     506  0.02s             0           0  0.06s           2024-02-29T07:52:01
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    507  0.01s             0           0  0.05s           2024-02-29T07:52:01
+================================================================================
+[2024-02-29T07:53:01.746+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     535  0.02s             0           0  0.06s           2024-02-29T07:52:31
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py    536  0.01s             0           0  0.05s           2024-02-29T07:52:31
+================================================================================
+[2024-02-29T07:53:29.929+0000] {manager.py:724} INFO - Searching for files in /opt/airflow/dags
+[2024-02-29T07:53:29.951+0000] {manager.py:727} INFO - There are 3 files in /opt/airflow/dags
+[2024-02-29T07:53:32.036+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                          555  2.05s             0           0
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py     565  0.02s             0           0  0.07s           2024-02-29T07:53:01
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.06s           2024-02-29T07:53:01
+================================================================================
+[2024-02-29T07:54:02.100+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.73s           2024-02-29T07:53:57
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.19s           2024-02-29T07:53:32
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.23s           2024-02-29T07:53:32
+================================================================================
+[2024-02-29T07:54:32.189+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.75s           2024-02-29T07:54:11
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:54:02
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T07:54:02
+================================================================================
+[2024-02-29T07:55:02.407+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.67s           2024-02-29T07:55:00
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:54:33
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.04s           2024-02-29T07:54:33
+================================================================================
+[2024-02-29T07:55:32.901+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.66s           2024-02-29T07:55:18
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:55:03
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T07:55:03
+================================================================================
+[2024-02-29T07:56:03.134+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                          706  0.01s             0           1  0.66s           2024-02-29T07:55:56
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.06s           2024-02-29T07:55:33
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.06s           2024-02-29T07:55:33
+================================================================================
+[2024-02-29T07:56:33.184+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.88s           2024-02-29T07:56:04
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:56:04
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.04s           2024-02-29T07:56:04
+================================================================================
+[2024-02-29T07:57:03.463+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.58s           2024-02-29T07:56:34
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:56:34
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.04s           2024-02-29T07:56:34
+================================================================================
+[2024-02-29T07:57:33.663+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.69s           2024-02-29T07:57:06
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:57:04
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.04s           2024-02-29T07:57:04
+================================================================================
+[2024-02-29T07:58:04.506+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.66s           2024-02-29T07:57:50
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.06s           2024-02-29T07:57:34
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T07:57:34
+================================================================================
+[2024-02-29T07:58:30.633+0000] {manager.py:724} INFO - Searching for files in /opt/airflow/dags
+[2024-02-29T07:58:30.653+0000] {manager.py:727} INFO - There are 3 files in /opt/airflow/dags
+[2024-02-29T07:58:34.686+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.94s           2024-02-29T07:58:21
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:58:05
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T07:58:05
+================================================================================
+[2024-02-29T07:59:04.772+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.81s           2024-02-29T07:58:52
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.08s           2024-02-29T07:58:35
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.07s           2024-02-29T07:58:35
+================================================================================
+[2024-02-29T07:59:35.061+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.71s           2024-02-29T07:59:23
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.07s           2024-02-29T07:59:05
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.06s           2024-02-29T07:59:05
+================================================================================
+[2024-02-29T08:00:05.268+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.57s           2024-02-29T07:59:54
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T07:59:36
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T07:59:36
+================================================================================
+[2024-02-29T08:00:35.492+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.08s           2024-02-29T08:00:19
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T08:00:06
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:00:06
+================================================================================
+[2024-02-29T08:01:05.713+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.06s           2024-02-29T08:00:49
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.06s           2024-02-29T08:00:36
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:00:36
+================================================================================
+[2024-02-29T08:01:35.925+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.06s           2024-02-29T08:01:19
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T08:01:06
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:01:06
+================================================================================
+[2024-02-29T08:02:06.396+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.68s           2024-02-29T08:02:04
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.06s           2024-02-29T08:01:36
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:01:36
+================================================================================
+[2024-02-29T08:02:36.985+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.65s           2024-02-29T08:02:28
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.06s           2024-02-29T08:02:07
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:02:07
+================================================================================
+[2024-02-29T08:03:07.196+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.57s           2024-02-29T08:02:59
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.06s           2024-02-29T08:02:38
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:02:38
+================================================================================
+[2024-02-29T08:03:30.954+0000] {manager.py:724} INFO - Searching for files in /opt/airflow/dags
+[2024-02-29T08:03:30.975+0000] {manager.py:727} INFO - There are 3 files in /opt/airflow/dags
+[2024-02-29T08:03:37.397+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.61s           2024-02-29T08:03:30
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.05s           2024-02-29T08:03:08
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:03:08
+================================================================================
+[2024-02-29T08:04:07.630+0000] {manager.py:846} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                 PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Batching_Data.py                                                                                 0           1  0.66s           2024-02-29T08:04:02
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/subdags/subdag.py                            0           0  0.06s           2024-02-29T08:03:38
+/home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/plugins/workday.py                           0           0  0.05s           2024-02-29T08:03:38
+================================================================================
+[2024-02-29T08:04:36.413+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
