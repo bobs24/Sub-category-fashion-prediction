@@ -1,6 +1,6 @@
 # folder to be skipped
 /images_subcategory
-/airflow/.env
-/fastapi/.env
-/streamlit/.env
-/airflow/logs/scheduler
+airflow/.env
+fastapi/.env
+streamlit/.env
+airflow/logs/scheduler
