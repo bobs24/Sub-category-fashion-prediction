@@ -47,6 +47,29 @@ To run the project, follow these steps:
 
 2. Layers: Includes convolutional layers, batch normalization, max pooling, dropout, and dense layers.
 
+    - Input Layer: The input shape is (128, 128, 3), indicating images with a height and width of 128 pixels and 3 color channels (RGB).
+
+    - Convolutional Layers: The first convolutional layer has 32 filters of size (3, 3) and uses the ReLU activation function.
+    Batch normalization is applied after the first convolutional layer.
+    
+    - Max pooling with a pool size of (2, 2) is used to downsample the spatial dimensions.
+    
+    - Dropout: Dropout with a rate of 0.25 is applied after the first max pooling layer to prevent overfitting.
+    
+    - Second Convolutional Layer: Similar to the first convolutional layer, but with 64 filters.
+
+    - Flatten Layer: Flattens the output from the convolutional layers into a 1D array to prepare for the fully connected layers.
+    
+    - Dense Layers: The first dense layer has 128 units and uses the ReLU activation function.
+
+    - Batch normalization is applied after the first dense layer.
+
+    - Dropout with a rate of 0.5 is applied after the batch normalization layer to prevent overfitting.
+
+    - Output Layer: The output layer has units equal to the number of classes in your dataset (num_classes). It uses the softmax activation function to output a probability distribution over the classes.
+
+![Preview of CNN Model](image.png)
+
 ### Model Compilation
 
 1. Optimizer: Adam optimizer with a learning rate of 0.001.
@@ -75,6 +98,7 @@ To run the project, follow these steps:
 1. Model Summary: Displays the model architecture and parameters.
 
 2. Validation: Model performance evaluated on the test set.
+
 3. TensorBoard: Visualizes training metrics for analysis.
 
 ### Conclusion
