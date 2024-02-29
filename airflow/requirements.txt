@@ -1,0 +1,16 @@
+pandas==1.1.5
+requests==2.27.1
+duckdb
+gunicorn==20.1.0
+apache-airflow
+psycopg2-binary
+sodapy
+python-dotenv
+opencv-python-headless
+selenium==3.141.0
+urllib3==1.26.16
+webdriver_manager
+pyautogui
+boto3
+msedge-selenium-tools
+openpyxl
