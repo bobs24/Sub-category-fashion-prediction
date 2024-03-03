@@ -1,0 +1,68 @@
+[2024-03-02T16:58:07.108+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping manual__2024-03-02T16:58:03.757459+00:00 [queued]>
+[2024-03-02T16:58:07.119+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping manual__2024-03-02T16:58:03.757459+00:00 [queued]>
+[2024-03-02T16:58:07.120+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T16:58:07.121+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 6
+[2024-03-02T16:58:07.121+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T16:58:07.138+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Scrapping> on 2024-03-02 16:58:03.757459+00:00
+[2024-03-02T16:58:07.146+0000] {standard_task_runner.py:55} INFO - Started process 911 to run task
+[2024-03-02T16:58:07.150+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Batching_Data', 'Scrapping', 'manual__2024-03-02T16:58:03.757459+00:00', '--job-id', '280', '--raw', '--subdir', 'DAGS_FOLDER/Batching_Data.py', '--cfg-path', '/tmp/tmpgdlnswaf']
+[2024-03-02T16:58:07.152+0000] {standard_task_runner.py:83} INFO - Job 280: Subtask Scrapping
+[2024-03-02T16:58:07.283+0000] {task_command.py:376} INFO - Running <TaskInstance: Batching_Data.Scrapping manual__2024-03-02T16:58:03.757459+00:00 [running]> on host 76a23c179f72
+[2024-03-02T16:58:07.413+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Bob Sebastian
+AIRFLOW_CTX_DAG_ID=Batching_Data
+AIRFLOW_CTX_TASK_ID=Scrapping
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-02T16:58:03.757459+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-03-02T16:58:03.757459+00:00
+[2024-03-02T17:01:14.517+0000] {local_task_job.py:228} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2024-03-02T17:01:14.522+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 911. PIDs of all processes in the group: [911]
+[2024-03-02T17:01:14.522+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 911
+[2024-03-02T17:01:14.523+0000] {taskinstance.py:1562} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-03-02T17:01:14.544+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Batching_Data.py", line 43, in batching_data
+    driver = webdriver.Remote(f'{remote_webdriver}:4444/wd/hub', options=options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 402, in _request
+    resp = http.request(method, url, body=body, headers=headers)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/request.py", line 79, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1564, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-03-02T17:01:14.557+0000] {taskinstance.py:1406} INFO - Marking task as UP_FOR_RETRY. dag_id=Batching_Data, task_id=Scrapping, execution_date=20240302T165803, start_date=20240302T165807, end_date=20240302T170114
+[2024-03-02T17:01:14.580+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 280 for task Scrapping (Task received SIGTERM signal; 911)
+[2024-03-02T17:01:14.615+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=911, status='terminated', exitcode=1, started='16:58:06') (911) terminated with exit code 1

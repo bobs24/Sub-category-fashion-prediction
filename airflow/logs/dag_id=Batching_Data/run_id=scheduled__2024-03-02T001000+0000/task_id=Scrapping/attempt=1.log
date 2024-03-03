@@ -1,0 +1,102 @@
+[2024-03-02T10:28:06.115+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T00:10:00+00:00 [queued]>
+[2024-03-02T10:28:06.138+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T00:10:00+00:00 [queued]>
+[2024-03-02T10:28:06.143+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T10:28:06.145+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 6
+[2024-03-02T10:28:06.146+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T10:28:06.178+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Scrapping> on 2024-03-02 00:10:00+00:00
+[2024-03-02T10:28:06.202+0000] {standard_task_runner.py:55} INFO - Started process 525 to run task
+[2024-03-02T10:28:06.206+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Batching_Data', 'Scrapping', 'scheduled__2024-03-02T00:10:00+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/Batching_Data.py', '--cfg-path', '/tmp/tmp6upic80q']
+[2024-03-02T10:28:06.209+0000] {standard_task_runner.py:83} INFO - Job 90: Subtask Scrapping
+[2024-03-02T10:28:06.349+0000] {task_command.py:376} INFO - Running <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T00:10:00+00:00 [running]> on host 14617ffbd56e
+[2024-03-02T10:28:06.499+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Bob Sebastian
+AIRFLOW_CTX_DAG_ID=Batching_Data
+AIRFLOW_CTX_TASK_ID=Scrapping
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-02T00:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-02T00:10:00+00:00
+[2024-03-02T10:28:06.501+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-03-02T10:28:06.881+0000] {logger.py:11} INFO - Get LATEST edgedriver version for Edge None
+[2024-03-02T10:28:06.895+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7fb8334b33d0>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_STABLE (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb8334b33d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/core/http.py", line 33, in get
+    url=url, verify=self._ssl_verify, stream=True, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_STABLE (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fb8334b33d0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Batching_Data.py", line 41, in batching_data
+    driver = Edge(EdgeChromiumDriverManager().install(), options=options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/microsoft.py", line 73, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/core/manager.py", line 40, in _get_driver_binary_path
+    file = self._download_manager.download_file(driver.get_driver_download_url(os_type))
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/core/driver.py", line 37, in get_driver_download_url
+    return f"{self._url}/{self.get_driver_version_to_download()}/{self._name}_{os_type}.zip"
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/core/driver.py", line 48, in get_driver_version_to_download
+    return self.get_latest_release_version()
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/drivers/edge.py", line 38, in get_latest_release_version
+    if (determined_browser_version is None)
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/drivers/edge.py", line 29, in get_stable_release_version
+    resp = self._http_client.get(url=stable_url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/webdriver_manager/core/http.py", line 35, in get
+    raise exceptions.ConnectionError(f"Could not reach host. Are you offline?")
+requests.exceptions.ConnectionError: Could not reach host. Are you offline?
+[2024-03-02T10:28:06.924+0000] {taskinstance.py:1406} INFO - Marking task as UP_FOR_RETRY. dag_id=Batching_Data, task_id=Scrapping, execution_date=20240302T001000, start_date=20240302T102806, end_date=20240302T102806
+[2024-03-02T10:28:06.954+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 90 for task Scrapping (Could not reach host. Are you offline?; 525)
+[2024-03-02T10:28:06.989+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2024-03-02T10:28:07.026+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

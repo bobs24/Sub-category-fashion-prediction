@@ -11,6 +11,12 @@ selenium==3.141.0
 urllib3==1.26.16
 webdriver_manager
 pyautogui
+scikit-learn
 boto3
 msedge-selenium-tools
 openpyxl
+tensorflow-cpu
+pytz
+opencv-python
+python-multipart
+joblib==1.3.2

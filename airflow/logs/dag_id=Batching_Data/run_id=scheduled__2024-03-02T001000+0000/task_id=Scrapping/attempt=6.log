@@ -1,0 +1,76 @@
+[2024-03-02T10:31:21.605+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T00:10:00+00:00 [queued]>
+[2024-03-02T10:31:21.629+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T00:10:00+00:00 [queued]>
+[2024-03-02T10:31:21.630+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T10:31:21.631+0000] {taskinstance.py:1363} INFO - Starting attempt 6 of 6
+[2024-03-02T10:31:21.631+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T10:31:21.668+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Scrapping> on 2024-03-02 00:10:00+00:00
+[2024-03-02T10:31:21.682+0000] {standard_task_runner.py:55} INFO - Started process 846 to run task
+[2024-03-02T10:31:21.688+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Batching_Data', 'Scrapping', 'scheduled__2024-03-02T00:10:00+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/Batching_Data.py', '--cfg-path', '/tmp/tmpqhdp78jf']
+[2024-03-02T10:31:21.692+0000] {standard_task_runner.py:83} INFO - Job 97: Subtask Scrapping
+[2024-03-02T10:31:21.857+0000] {task_command.py:376} INFO - Running <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T00:10:00+00:00 [running]> on host 14617ffbd56e
+[2024-03-02T10:31:22.031+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Bob Sebastian
+AIRFLOW_CTX_DAG_ID=Batching_Data
+AIRFLOW_CTX_TASK_ID=Scrapping
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-02T00:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-02T00:10:00+00:00
+[2024-03-02T10:31:22.034+0000] {logger.py:11} INFO - ====== WebDriver manager ======
+[2024-03-02T10:31:22.439+0000] {logger.py:11} INFO - Get LATEST edgedriver version for Edge None
+[2024-03-02T10:31:29.385+0000] {logger.py:11} INFO - About to download new driver from https://msedgedriver.azureedge.net/122.0.2365.63/edgedriver_linux64.zip
+[2024-03-02T10:31:29.754+0000] {logger.py:11} INFO - Driver downloading response is 200
+[2024-03-02T10:31:40.766+0000] {logger.py:11} INFO - Get LATEST edgedriver version for Edge None
+[2024-03-02T10:31:44.218+0000] {logger.py:11} INFO - Get LATEST edgedriver version for Edge None
+[2024-03-02T10:31:46.037+0000] {logger.py:11} INFO - Driver has been saved in cache [/home/***/.wdm/drivers/edgedriver/linux64/122.0.2365.63]
+[2024-03-02T10:31:47.084+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Batching_Data.py", line 41, in batching_data
+    driver = Edge(EdgeChromiumDriverManager().install(), options=options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/msedge/selenium_tools/webdriver.py", line 104, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 98, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 111, in assert_process_still_running
+    % (self.path, return_code)
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.wdm/drivers/edgedriver/linux64/122.0.2365.63/msedgedriver unexpectedly exited. Status code was: 127
+
+[2024-03-02T10:31:47.121+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=Batching_Data, task_id=Scrapping, execution_date=20240302T001000, start_date=20240302T103121, end_date=20240302T103147
+[2024-03-02T10:31:47.122+0000] {taskinstance.py:1619} ERROR - Error when executing on_failure callback
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1457, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1603, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1659, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Batching_Data.py", line 41, in batching_data
+    driver = Edge(EdgeChromiumDriverManager().install(), options=options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/msedge/selenium_tools/webdriver.py", line 104, in __init__
+    self.service.start()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 98, in start
+    self.assert_process_still_running()
+  File "/home/airflow/.local/lib/python3.7/site-packages/selenium/webdriver/common/service.py", line 111, in assert_process_still_running
+    % (self.path, return_code)
+selenium.common.exceptions.WebDriverException: Message: Service /home/airflow/.wdm/drivers/edgedriver/linux64/122.0.2365.63/msedgedriver unexpectedly exited. Status code was: 127
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1617, in _run_finished_callback
+    callback(context)
+TypeError: batching_data() takes 0 positional arguments but 1 was given
+[2024-03-02T10:31:47.177+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 97 for task Scrapping (Message: Service /home/airflow/.wdm/drivers/edgedriver/linux64/122.0.2365.63/msedgedriver unexpectedly exited. Status code was: 127
+; 846)
+[2024-03-02T10:31:47.207+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2024-03-02T10:31:47.254+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

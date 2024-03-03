@@ -18,8 +18,10 @@ from selenium.webdriver.common.by import By
 from msedge.selenium_tools import Edge, EdgeOptions
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 import openpyxl
 import os
+import io
 import boto3
 from tensorflow.keras.models import model_from_json
 from joblib import load
@@ -28,7 +30,7 @@ from requests_toolbelt.multipart.encoder import MultipartEncoder
 load_dotenv()
 
 def batching_data():
-    options = EdgeOptions()
+    options = webdriver.ChromeOptions()
     options.use_chromium = True  # Use Chromium-based Edge
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
@@ -37,7 +39,8 @@ def batching_data():
     options.set_capability("pageLoadStrategy", "eager")
     options.set_capability("unhandledPromptBehavior", "accept")
 
-    driver = Edge(EdgeChromiumDriverManager().install(), options=options)
+    remote_webdriver = 'remote_chromedriver'
+    driver = webdriver.Remote(f'{remote_webdriver}:4444/wd/hub', options=options)
 
     url = "https://www.huntstreet.com/shop/all/{}?type={}&page={}"
 
@@ -81,29 +84,26 @@ def batching_data():
     # Create a client for Spaces
     s3 = boto3.client('s3', aws_access_key_id=access_key, aws_secret_access_key=secret_key, endpoint_url=endpoint_url)
 
-    for photo in Photos:
-        image_name = photo.split('/')[-1]  # Extract the image file name
-        image_data = urllib.request.urlopen(photo).read()  # Read image data from URL
+    for photo_url in Photos:
+        image_name = photo_url.split('/')[-1]  # Extract the image file name
 
-        # Upload image to the bucket
-        s3.put_object(Bucket=space_name, Key=f"{folder_name}/{image_name}", Body=image_data)
+        # Read image data from URL
+        image_data = urllib.request.urlopen(photo_url).read()
 
-        # Make a request to the FastAPI endpoint for prediction
-        image_data = {'file': ('filename', photo, 'image/jpeg')}
+        # Create a file-like object from the image data
+        # image_file = io.BytesIO(image_data)
+
+        image_data = {'file': (image_name, image_data, 'image/jpeg')}
         image_multipart = MultipartEncoder(fields=image_data)
         headers = {'Content-Type': image_multipart.content_type}
+
+        # Make the POST request
         response = requests.post(os.getenv("fastapi_post"),
                                     data=image_multipart,
                                     headers=headers,
                                     timeout=60)
         
-        if response.status_code == 200:
-            prediction = response.json()
-            predicted_class = prediction['prediction']
-            print(f"Image: {image_name}, Predicted Class: {predicted_class}")
-        else:
-            print(f"Error processing image: {image_name}")
-
+        print(response.text)  # Print the response text
 
 args = {
     'owner': 'Bob Sebastian',

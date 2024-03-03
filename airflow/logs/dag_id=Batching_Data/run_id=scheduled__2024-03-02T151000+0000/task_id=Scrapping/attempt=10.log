@@ -1,0 +1,19 @@
+[2024-03-02T15:49:01.869+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T15:10:00+00:00 [queued]>
+[2024-03-02T15:49:01.888+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T15:10:00+00:00 [queued]>
+[2024-03-02T15:49:01.889+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T15:49:01.890+0000] {taskinstance.py:1363} INFO - Starting attempt 10 of 12
+[2024-03-02T15:49:01.891+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T15:49:01.918+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Scrapping> on 2024-03-02 15:10:00+00:00
+[2024-03-02T15:49:01.934+0000] {standard_task_runner.py:55} INFO - Started process 706 to run task
+[2024-03-02T15:49:01.938+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Batching_Data', 'Scrapping', 'scheduled__2024-03-02T15:10:00+00:00', '--job-id', '226', '--raw', '--subdir', 'DAGS_FOLDER/Batching_Data.py', '--cfg-path', '/tmp/tmppte2pt3m']
+[2024-03-02T15:49:01.941+0000] {standard_task_runner.py:83} INFO - Job 226: Subtask Scrapping
+[2024-03-02T15:49:02.086+0000] {task_command.py:376} INFO - Running <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T15:10:00+00:00 [running]> on host 9605b44bfb45
+[2024-03-02T15:49:02.307+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Bob Sebastian
+AIRFLOW_CTX_DAG_ID=Batching_Data
+AIRFLOW_CTX_TASK_ID=Scrapping
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-02T15:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=10
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-02T15:10:00+00:00

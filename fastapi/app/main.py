@@ -67,7 +67,7 @@ async def classify_image(file: UploadFile = File(...)):
             await conn.execute("INSERT INTO database_prediction (image, prediction, datetime) VALUES ($1, $2, $3)",
                                f"{endpoint_url}/{space_name}/{folder_name}/{file.filename}", 
                                predicted_class, 
-                               datetime.now() + timedelta(hours=14))
+                               datetime.now() + timedelta(hours=7))
 
         # Upload image to DigitalOcean Spaces
         image_data = await file.read()  # Read image data

@@ -1,0 +1,31 @@
+[2024-03-02T16:19:22.827+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T14:40:00+00:00 [queued]>
+[2024-03-02T16:19:22.851+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T14:40:00+00:00 [queued]>
+[2024-03-02T16:19:22.852+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T16:19:22.852+0000] {taskinstance.py:1363} INFO - Starting attempt 9 of 14
+[2024-03-02T16:19:22.853+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T16:19:22.881+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Scrapping> on 2024-03-02 14:40:00+00:00
+[2024-03-02T16:19:22.893+0000] {standard_task_runner.py:55} INFO - Started process 119 to run task
+[2024-03-02T16:19:22.897+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Batching_Data', 'Scrapping', 'scheduled__2024-03-02T14:40:00+00:00', '--job-id', '266', '--raw', '--subdir', 'DAGS_FOLDER/Batching_Data.py', '--cfg-path', '/tmp/tmpskwa8n7_']
+[2024-03-02T16:19:22.900+0000] {standard_task_runner.py:83} INFO - Job 266: Subtask Scrapping
+[2024-03-02T16:19:23.032+0000] {task_command.py:376} INFO - Running <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T14:40:00+00:00 [running]> on host 3757548564a1
+[2024-03-02T16:19:23.232+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Bob Sebastian
+AIRFLOW_CTX_DAG_ID=Batching_Data
+AIRFLOW_CTX_TASK_ID=Scrapping
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-02T14:40:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=9
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-02T14:40:00+00:00
+[2024-03-02T16:19:36.130+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:338: UserWarning: Trying to unpickle estimator LabelEncoder from version 1.2.2 when using version 1.0.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/modules/model_persistence.html#security-maintainability-limitations
+  UserWarning,
+
+[2024-03-02T16:19:36.954+0000] {logging_mixin.py:120} INFO - <Response [200]>
+[2024-03-02T16:19:37.191+0000] {logging_mixin.py:120} INFO - <Response [200]>
+[2024-03-02T16:19:37.483+0000] {logging_mixin.py:120} INFO - <Response [200]>
+[2024-03-02T16:19:37.734+0000] {logging_mixin.py:120} INFO - <Response [200]>
+[2024-03-02T16:19:37.738+0000] {python.py:177} INFO - Done. Returned value was: None
+[2024-03-02T16:19:37.765+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=Batching_Data, task_id=Scrapping, execution_date=20240302T144000, start_date=20240302T161922, end_date=20240302T161937
+[2024-03-02T16:19:37.865+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2024-03-02T16:19:37.903+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

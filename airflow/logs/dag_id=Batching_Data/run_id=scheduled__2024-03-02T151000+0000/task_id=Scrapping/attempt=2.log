@@ -1,0 +1,93 @@
+[2024-03-02T15:42:47.250+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T15:10:00+00:00 [queued]>
+[2024-03-02T15:42:47.270+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T15:10:00+00:00 [queued]>
+[2024-03-02T15:42:47.271+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T15:42:47.272+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 6
+[2024-03-02T15:42:47.272+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-02T15:42:47.301+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): Scrapping> on 2024-03-02 15:10:00+00:00
+[2024-03-02T15:42:47.319+0000] {standard_task_runner.py:55} INFO - Started process 163 to run task
+[2024-03-02T15:42:47.323+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Batching_Data', 'Scrapping', 'scheduled__2024-03-02T15:10:00+00:00', '--job-id', '218', '--raw', '--subdir', 'DAGS_FOLDER/Batching_Data.py', '--cfg-path', '/tmp/tmpwwzehfwl']
+[2024-03-02T15:42:47.326+0000] {standard_task_runner.py:83} INFO - Job 218: Subtask Scrapping
+[2024-03-02T15:42:47.465+0000] {task_command.py:376} INFO - Running <TaskInstance: Batching_Data.Scrapping scheduled__2024-03-02T15:10:00+00:00 [running]> on host 9605b44bfb45
+[2024-03-02T15:42:47.643+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Bob Sebastian
+AIRFLOW_CTX_DAG_ID=Batching_Data
+AIRFLOW_CTX_TASK_ID=Scrapping
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-02T15:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-02T15:10:00+00:00
+[2024-03-02T15:43:00.399+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/sklearn/base.py:338: UserWarning: Trying to unpickle estimator LabelEncoder from version 1.2.2 when using version 1.0.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/modules/model_persistence.html#security-maintainability-limitations
+  UserWarning,
+
+[2024-03-02T15:43:01.026+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 415, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fb2b908eb90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /classify/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb2b908eb90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Batching_Data.py", line 100, in batching_data
+    timeout=60)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /classify/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb2b908eb90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2024-03-02T15:43:01.099+0000] {taskinstance.py:1406} INFO - Marking task as UP_FOR_RETRY. dag_id=Batching_Data, task_id=Scrapping, execution_date=20240302T151000, start_date=20240302T154247, end_date=20240302T154301
+[2024-03-02T15:43:01.129+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 218 for task Scrapping (HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /classify/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb2b908eb90>: Failed to establish a new connection: [Errno 111] Connection refused')); 163)
+[2024-03-02T15:43:01.206+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2024-03-02T15:43:01.278+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
